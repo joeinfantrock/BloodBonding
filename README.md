@@ -18,7 +18,7 @@ I have used a Javascript HTML Renderer called html2canvas to take screenshots of
 I have also used Maven for being able to add dependencies and automating the build process. <br>
 I have used ThymeLeaf for Dynamic Html Pages.<br>
 Many Images were also used, to enhance the quality of use, which I have included in the Project. <br>
-Model View Controller technique is used, involving Entity Class, Service Class, and Controller Class.
+I used the Model View Controller technique involving Entity Class, Service Class, and Controller Class.
 
 <br>
 
