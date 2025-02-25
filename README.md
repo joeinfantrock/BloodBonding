@@ -13,7 +13,7 @@ Hello, I am Joe and this is my fourth project, which is a simple Online BloodBan
 I made this project for my college mini project. I did this in my second year.<br>
 It took a lot of time and researching to make.<br>
 I have used Java, SpringBoot Framework, Thymeleaf, MySQL and used Eclipse IDE. <br>
-I have also used HTML templates, CSS for styling and JavaScript, for actions after button clicking. JavaScript is not used much, but to just experiment with what it does. <br>
+I have also used HTML templates, CSS for styling and JavaScript. <br>
 I have used a Javascript HTML Renderer called html2canvas to take screenshots of the certificate displayed to make the certificate available for download to donors who donated. <br>
 I have also used Maven for being able to add dependencies and automating the build process. <br>
 I have used ThymeLeaf for Dynamic Html Pages.<br>
