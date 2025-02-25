@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Blood Bonding | Login Page</title>
+    <link rel="stylesheet" href="/styles/stylo.css">
+</head>
+<body class = "homepage">
+<h1 class="custname">
+        <center>BLOOD BONDING</center>
+    </h1>
+	<div class="wrapper">
+    <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+    <div class="form-box login">
+        <h2>Login</h2>
+        <form th:action="@{/submitUser}" method="post">
+            <div class="input-box">
+                <span class="icon"><ion-icon name="person-circle"></ion-icon></span>
+                <input name="User" type="text" style ="color: white" required>
+                <label>Username</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                <input name="Pass" type="password" style ="color: white" required>
+                <label>Password</label>
+            </div>
+            <br>
+            <div class="remember-forgot">
+                <label><input type="checkbox" required> I will bleed for you!</label>
+                <a href="#" style="color:cyan;">Forgot password</a>
+            </div>
+            <br>
+            <button type="submit" value="Submit" class="btn">Login</button>
+        </form>
+        <form th:action="@{/Reg}" method="post">
+            <div class="Register">
+                <p>Don't have an account! 
+                    <button type="submit" value="Submit" class="Register-link">Register</button>
+                </p>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!--  <h1>Practices</h1>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="practice : ${practices}">
+            <td th:text="${practice.id}"></td>
+            <td th:text="${practice.name}"></td>
+        </tr>
+    </tbody> 
+</table>-->
+<br><br>
+
+<script type="text/javascript" th:src="@{/Script/AppScript.js}"></script> 
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

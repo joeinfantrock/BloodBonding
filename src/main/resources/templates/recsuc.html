@@ -1,0 +1,28 @@
+<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Receiver Confirmation</title>
+    <link rel="stylesheet" href="/styles/stylo.css">  
+<body class = "recfinal">
+<div style ="color: black;">
+<center><h1 style="font-size: 36px;">Thank you for using our website! </h1>
+		<br>
+
+		<h1>If we are correct: You want to receive blood from: </h1>
+		<br>
+		<div style="font-size: 28px;">
+		<p><strong>Name:</strong> <span th:text="${recDeets.Name}">Blood Group</span></p>
+                        <p><strong>Blood Group:</strong> <span th:text="${recDeets.BGroup}">Blood Group</span></p>
+                        <p><strong>Age:</strong> <span th:text="${recDeets.Age}">Blood Group</span></p>
+                        <p><strong>Gender:</strong> <span th:text="${recDeets.Gender}">Contact Info</span></p>
+                        <p><strong>City:</strong> <span th:text="${recDeets.City}">Blood Group</span></p>
+                        <p><strong>Phone:</strong> <span th:text="${recDeets.Phone}">Location</span></p> 
+        </div>
+<br>
+<br>
+<h1>We will get in touch with you in 2-3 hours, after speaking with the Donor, and will help you two connect.</h1> </center>
+</div>
+<script src="/Script/AppScript.js"></script>
+</body>
+</html>

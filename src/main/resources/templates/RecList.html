@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Potential Matches</title>
+    <link rel="stylesheet" href="/styles/stylo.css">  
+</head>
+<body class="forpic">
+    <h1 style="color: rgb(253, 208, 23); font-size: 36px;"><b><u>Potential Blood Donors</u></b></h1>
+    <h1 style="color: rgb(253, 208, 23); font-size: 32px;"><b>Your Name: <span th:text="${usedet.Name}">Name</span></b></h1>
+    <h1 style="color: rgb(253, 208, 23); font-size: 32px;"><b>Your Blood Group: <span th:text="${usedet.BGroup}">Blood Group</span></b></h1>
+    <h1 style="color:#98FB98; font-size: 30px;"><u>Matching Donors in your city:</u></h1>
+    
+    <div th:if="${#lists.isEmpty(sameMatches)}">
+        <h2 style="color:#FF2400; font-size: 28px;">No matching donors found in your city :(</h2>
+    </div>
+  
+    <ul class="donor-list" th:unless="${#lists.isEmpty(sameMatches)}">
+        <li th:each="match : ${sameMatches}">
+            <div class="donor-box" th:onclick="'toggleDetails(' + ${match.id} + ')'">
+          <b>   <span th:text="${match.Name}">Donor Name</span> </b>
+            </div>
+            <div th:id="'details-' + ${match.id}" class="details" style="display: none;">
+                <p><strong>Name:</strong> <span th:text="${match.Name}">Blood Group</span></p>
+                <p><strong>Blood Group:</strong> <span th:text="${match.BGroup}">Blood Group</span></p>
+                <p><strong>Age:</strong> <span th:text="${match.Age}">Blood Group</span></p>
+                <p><strong>Gender:</strong> <span th:text="${match.Gender}">Contact Info</span></p>
+                <p><strong>City:</strong> <span th:text="${match.City}">Blood Group</span></p>
+                <p><strong>Disease History:</strong> <span th:text="${match.DisHis}">Blood Group</span></p>
+            </div>
+        </li>
+    </ul>
+
+    <br>
+    <div class="box">
+        <h1 style="color: #98FB98;"><u>Donors In Different Cities:</u></h1>
+        <ul class="donor-list">
+            <li th:each="match : ${difMatch}">
+                <div class="donor-box" th:onclick="'toggleDetails(' + ${match.id} + ')'">
+            <b>     <span th:text="${match.Name}">Donor Name</span>   </b>
+                </div>
+                <div th:id="'details-' + ${match.id}" class="details" style="display: none;">
+                    <p><strong>Name:</strong> <span th:text="${match.Name}">Blood Group</span></p>
+                    <p><strong>Blood Group:</strong> <span th:text="${match.BGroup}">Blood Group</span></p>
+                    <p><strong>Age:</strong> <span th:text="${match.Age}">Blood Group</span></p>
+                    <p><strong>Gender:</strong> <span th:text="${match.Gender}">Contact Info</span></p>
+                    <p><strong>City:</strong> <span th:text="${match.City}">Blood Group</span></p>
+                    <p><strong>Disease History:</strong> <span th:text="${match.DisHis}">Blood Group</span></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <br>
+    <br>
+    <div class="subbox">
+        <div class="sub">
+            <button type="button" class="sub-button" onclick="submitSelectedDonor()">Submit!</button>
+        </div>
+    </div>
+    
+
+    <script src="/Script/AppScript.js"></script> 
+</body>
+</html>

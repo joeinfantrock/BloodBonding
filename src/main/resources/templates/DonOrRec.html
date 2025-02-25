@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/stylo.css">
+    <title>Blood Donation Portal</title>
+</head>
+<body class = "ButtonBody">
+
+	 <h1 class = "totop" th:text="'Hello, ' + ${name} + '!'">Hello, Unknown Person!</h1>
+	<h1 class = "redcol"><b>BLEED  FOR  A  CAUSE !</b></h1>
+    <div class="donorrecbox">
+        <h2>Do you want to: </h2>
+        <div class="options">
+            <button id="donateBtn" type="submit" class="option-button" onclick="Dondet()">Donate</button>
+			<button id="receiveBtn" type="submit" class="option-button">Receive</button>
+        </div>
+    </div>
+
+    <script src="/Script/AppScript.js"></script>
+</body>
+</html>

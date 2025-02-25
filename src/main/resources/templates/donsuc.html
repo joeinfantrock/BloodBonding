@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<title>Certificate Download</title>
+<head>
+<link rel="stylesheet" href="/styles/stylo.css">  
+</head>
+<body class = "donsucback">
+<div class ="leftimg">
+<img class = "frooti" th:src="@{/images/frootitrans.png}" >
+</div>
+    <div class="certificate" id = "certidown" style="background-color: white;">
+        <h1>Certificate of Donation</h1>
+        <p>This certifies that</p>
+        <h2 th:text="${name}"></h2> 
+        <p>has bled for someone.</p>
+        <br>
+    	<img class = "logo" th:src="@{/images/bloodlogotrans.png}" style="width: 250px; height: auto;"> 
+</div>
+    <div class = "certbutton">
+    <button id="downloadButton" type = "button" >Download your certificate</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="/Script/AppScript.js" defer></script> <!-- To let DOM load in we use defer -->
+</body>
+</html>
