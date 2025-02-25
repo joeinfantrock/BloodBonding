@@ -1,1 +1,30 @@
-
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Potential users</title>
+    <link rel="stylesheet" href="/styles/stylo.css">  
+</head>
+<body>
+<h1>Your Details: </h1>
+<div class = "cow" style="font-size: 26px;">
+                <p><strong>Name:</strong> <span th:text="${user.Name}">Name</span></p>
+                <p><strong>Blood Group:</strong> <span th:text="${user.BGroup}">Blood Group</span></p>
+                <p><strong>Age:</strong> <span th:text="${user.Age}">Age</span></p>
+                <p><strong>Gender:</strong> <span th:text="${user.Gender}">Contact Info</span></p>
+                <p><strong>City:</strong> <span th:text="${user.City}">Blood Group</span></p>
+                <p><strong>Disease History:</strong> <span th:text="${user.DisHis}">Blood Group</span></p>
+                <p><strong>Phone:</strong> <span th:text="${user.Phone}">Location</span></p>
+                <p><strong>Email:</strong> <span th:text="${user.Email}">Location</span></p>
+</div> 
+<br>
+<br>
+<h1>Thank you for choosing to donate. You will get a free Frooti for this great thing you have done.</h1>
+<br>
+<h1> You will get a call from us regarding the other details.</h1>
+<br>
+<button type="button" class="sub-button" id = "downloadButton" onclick="ToFinalDon()">Submit!</button>
+            
+<script type="text/javascript" th:src="@{/Script/AppScript.js}"></script>
+</body>
+</html>
